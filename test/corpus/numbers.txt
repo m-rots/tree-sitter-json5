@@ -1,0 +1,148 @@
+==============
+Leading zeroes
+==============
+
+[0, 0., 0e0]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)))
+
+========
+Integers
+========
+
+[1, 23, 456, 7890]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)))
+
+==============
+Signed numbers
+==============
+
+[-1, +2, -.1, -0]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)))
+
+======================
+Leading decimal points
+======================
+
+[.1, .23]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)))
+
+==================
+Fractional numbers
+==================
+
+[1.0, 1.23]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)))
+
+=========
+Exponents
+=========
+
+[1e0, 1e1, 1e01, 1.e0, 1.1e0, 1e-1, 1e+1]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)))
+
+===========
+Hexadecimal
+===========
+
+[0x1, 0x10, 0xff, 0xFF]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)))
+
+============================
+Signed and unsigned Infinity
+============================
+
+[Infinity, -Infinity]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)))
+
+=======================
+Signed and unsigned NaN
+=======================
+
+[NaN, -NaN]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)))
+
+========
+Examples
+========
+
+[
+    1,
+    +1.23e100,
+    0x1,
+    -0x0123456789abcdefABCDEF,
+]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)))

@@ -1,0 +1,222 @@
+====
+Null
+====
+
+null
+
+---
+
+(source_file
+    (null))
+
+=======
+Boolean
+=======
+
+[true, false]
+
+---
+
+(source_file
+    (array
+        (boolean)
+        (boolean)))
+
+======
+String
+======
+
+[
+    "Hello World",
+    'Hello World',
+    "Hello\nWorld",
+]
+
+---
+
+(source_file
+    (array
+        (string (string_fragment))
+        (string (string_fragment))
+        (string
+            (string_fragment)
+            (escape_sequence)
+            (string_fragment))))
+
+======
+Number
+======
+
+[
+    123,
+    123.456,
+    .456,
+    123e-456,
+    0xdecaf,
+    -0xC0FFEE,
+    Infinity,
+    -Infinity,
+    NaN
+]
+
+---
+
+(source_file
+    (array
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)
+        (number)))
+
+======
+Object
+======
+
+[
+    // Empty
+    {},
+
+    // Double string property name
+    { "a": 1 },
+
+    // Single string property name
+    { 'a': 1 },
+
+    // Unquoted property name
+    { a: 1 },
+
+    // Multiple properties
+    {
+        width: 1920,
+        height: 1080,
+    },
+
+    // Nested
+    { a: { b: 2 } }
+]
+
+---
+
+(source_file
+    (array
+        (comment)
+        (object)
+
+        (comment)
+        (object
+            (member
+                (string (string_fragment))
+                (number)))
+
+        (comment)
+        (object
+            (member
+                (string (string_fragment))
+                (number)))
+
+        (comment)
+        (object
+            (member
+                (identifier)
+                (number)))
+
+        (comment)
+        (object
+            (member
+                (identifier)
+                (number))
+            (member
+                (identifier)
+                (number)))
+
+        (comment)
+        (object
+            (member
+                (identifier)
+                (object
+                    (member
+                        (identifier)
+                        (number)))))
+))
+
+======
+Arrays
+======
+
+[
+    // Empty array
+    [],
+
+    // Array values
+    [1],
+
+    // Multiple array values
+    [true, false],
+
+    // Nested Arrays
+    [1, [2, 3]],
+]
+
+---
+
+(source_file
+    (array
+        (comment)
+        (array)
+
+        (comment)
+        (array
+            (number))
+
+        (comment)
+        (array
+            (boolean)
+            (boolean))
+
+        (comment)
+        (array
+            (number)
+            (array
+                (number)
+                (number)))))
+
+============
+Line Comment
+============
+
+// Comment before
+[]
+// Comment after!
+
+---
+
+(source_file
+    (comment)
+    (array)
+    (comment))
+
+=============
+Block Comment
+=============
+
+/*
+Block comment before!
+*/
+[
+    /* Block comment Inside! */
+]
+/*
+Block comment after!
+*/
+
+---
+
+(source_file
+    (comment)
+    (array (comment))
+    (comment))

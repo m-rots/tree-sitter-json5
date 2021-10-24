@@ -1,0 +1,14 @@
+{
+    bool: true,
+//        ^ (constant.builtin)
+    number: 5,
+//          ^ (number)
+    string: "Hello!",
+//          ^ (string)
+    null: null,
+//        ^ (constant.builtin)
+    array: [],
+//         ^ (punctuation.bracket)
+    object: {},
+//          ^ (punctuation.bracket)
+}

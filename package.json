@@ -1,0 +1,33 @@
+{
+  "name": "tree-sitter-json5",
+  "version": "0.19.0",
+  "description": "JSON5 grammar for tree-sitter",
+  "repository": "https://github.com/m-rots/tree-sitter-json5",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "tree-sitter",
+    "json5"
+  ],
+  "author": "Storm Timmermans",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.19.1"
+  },
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.json5",
+      "file-types": [
+        "json5"
+      ],
+      "injection-regex": "json5"
+    }
+  ]
+}

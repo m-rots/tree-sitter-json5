@@ -1,0 +1,8 @@
+{
+    hello: "world",
+//  ^ property
+    "active": true,
+//  ^ string
+    'version': 2,
+//  ^ string
+}
