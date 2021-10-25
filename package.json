@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-json5",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "description": "JSON5 grammar for tree-sitter",
   "repository": "https://github.com/m-rots/tree-sitter-json5",
   "main": "bindings/node",
@@ -15,7 +15,7 @@
     "nan": "^2.15.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.19.1"
+    "tree-sitter-cli": "^0.20.0"
   },
   "scripts": {
     "build": "tree-sitter generate",
